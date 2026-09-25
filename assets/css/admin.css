@@ -1,0 +1,194 @@
+/* Lucky Egg — admin styles (RTL-friendly, logical properties). */
+
+.lucky-egg-admin .lucky-egg-card {
+	margin: 16px 0;
+	padding: 4px 20px 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.lucky-egg-admin .lucky-egg-card h2 {
+	margin: 16px 0 4px;
+	font-size: 1.15em;
+}
+
+.lucky-egg-admin .lucky-egg-card h3 {
+	margin: 18px 0 0;
+	padding-block-start: 12px;
+	border-block-start: 1px solid #f0f0f1;
+	font-size: 1em;
+}
+
+.lucky-egg-admin .lucky-egg-muted {
+	color: #646970;
+	font-size: 12px;
+}
+
+.lucky-egg-admin .lucky-egg-ltr {
+	direction: ltr;
+	text-align: start;
+	unicode-bidi: isolate;
+}
+
+.lucky-egg-admin .lucky-egg-table td,
+.lucky-egg-admin .lucky-egg-table th {
+	vertical-align: middle;
+}
+
+.lucky-egg-admin .lucky-egg-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.lucky-egg-admin .lucky-egg-inline-form {
+	display: inline;
+	margin: 0;
+}
+
+.lucky-egg-admin .lucky-egg-inline-fields {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.lucky-egg-admin .lucky-egg-inline-fields input[type="number"] {
+	width: 90px;
+}
+
+.lucky-egg-admin .lucky-egg-inline-fields .description {
+	flex-basis: 100%;
+	margin: 0;
+}
+
+.lucky-egg-admin .lucky-egg-color-text {
+	width: 110px;
+}
+
+.lucky-egg-admin .lucky-egg-color-picker {
+	width: 42px;
+	height: 30px;
+	padding: 0;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.lucky-egg-admin .lucky-egg-media {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.lucky-egg-admin .lucky-egg-media img {
+	width: 96px;
+	height: 128px;
+	object-fit: contain;
+	padding: 6px;
+	background: repeating-conic-gradient(#f0f0f1 0% 25%, #fff 0% 50%) 50% / 16px 16px;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+}
+
+.lucky-egg-admin .lucky-egg-badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	color: #50575e;
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.lucky-egg-admin .lucky-egg-badge.is-active,
+.lucky-egg-admin .lucky-egg-badge.sms-sent {
+	background: #edfaef;
+	color: #008a20;
+}
+
+.lucky-egg-admin .lucky-egg-badge.is-inactive,
+.lucky-egg-admin .lucky-egg-badge.sms-failed {
+	background: #fcf0f1;
+	color: #b32d2e;
+}
+
+.lucky-egg-admin .lucky-egg-badge.sms-pending,
+.lucky-egg-admin .lucky-egg-badge.sms-sending {
+	background: #fcf9e8;
+	color: #996800;
+}
+
+.lucky-egg-admin .lucky-egg-copy {
+	cursor: copy;
+}
+
+.lucky-egg-admin .lucky-egg-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+	margin: 16px 0 8px;
+}
+
+.lucky-egg-admin .lucky-egg-filters input[type="search"] {
+	min-width: 240px;
+}
+
+.lucky-egg-admin .lucky-egg-empty {
+	margin-top: 24px;
+	padding: 40px;
+	text-align: center;
+	background: #fff;
+	border: 1px dashed #c3c4c7;
+	border-radius: 8px;
+}
+
+.lucky-egg-admin .lucky-egg-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	gap: 12px;
+	margin: 16px 0 24px;
+}
+
+.lucky-egg-admin .lucky-egg-stat {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 18px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	border-inline-start: 4px solid #f59e0b;
+}
+
+.lucky-egg-admin .lucky-egg-stat__value {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.lucky-egg-admin .lucky-egg-stat__label {
+	color: #646970;
+}
+
+.lucky-egg-admin .lucky-egg-log code {
+	white-space: pre-wrap;
+	word-break: break-word;
+	font-size: 11px;
+}
+
+@media (max-width: 782px) {
+	.lucky-egg-admin .lucky-egg-table {
+		display: block;
+		overflow-x: auto;
+	}
+
+	.lucky-egg-admin .lucky-egg-filters input[type="search"] {
+		min-width: 0;
+		flex: 1 1 100%;
+	}
+}

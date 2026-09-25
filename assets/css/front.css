@@ -1,0 +1,648 @@
+/* Lucky Egg — frontend styles (RTL, responsive, no external dependencies). */
+
+.lucky-egg-wrap {
+	--le-egg-size: 260px;
+	--le-text-color: #1f2937;
+	--le-accent: #f59e0b;
+	--le-code-color: #92400e;
+	--le-code-bg: #fff7e6;
+	--le-font-size: 16px;
+	--le-radius: 16px;
+	--le-bg: transparent;
+	--le-gap: 16px;
+	width: 100%;
+}
+
+.lucky-egg {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--le-gap);
+	box-sizing: border-box;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 24px 16px;
+	direction: rtl;
+	text-align: center;
+	color: var(--le-text-color);
+	font-size: var(--le-font-size);
+	line-height: 1.8;
+	background: var(--le-bg);
+	border-radius: var(--le-radius);
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.lucky-egg *,
+.lucky-egg *::before,
+.lucky-egg *::after {
+	box-sizing: border-box;
+}
+
+.lucky-egg [hidden] {
+	display: none !important;
+}
+
+/* Stage ---------------------------------------------------------------- */
+
+.lucky-egg__stage {
+	position: relative;
+	width: min(var(--le-egg-size), 78vw);
+	aspect-ratio: 3 / 4;
+	transition: width 0.6s ease, aspect-ratio 0.6s ease;
+}
+
+.lucky-egg__egg {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-user-select: none;
+	z-index: 2;
+}
+
+.lucky-egg__egg:focus {
+	outline: none;
+}
+
+.lucky-egg__egg:focus-visible {
+	outline: 3px solid var(--le-accent);
+	outline-offset: 6px;
+	border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%;
+}
+
+.lucky-egg__halves {
+	position: absolute;
+	inset: 0;
+	display: block;
+	transform-origin: 50% 90%;
+}
+
+.lucky-egg[data-state="idle"] .lucky-egg__halves {
+	animation: le-float 3.2s ease-in-out infinite;
+}
+
+.lucky-egg[data-state="idle"] .lucky-egg__egg:hover .lucky-egg__halves {
+	animation: le-wobble 0.6s ease-in-out infinite;
+}
+
+.lucky-egg__half {
+	position: absolute;
+	inset: 0;
+	display: block;
+	transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.9s ease;
+	will-change: transform, opacity;
+}
+
+.lucky-egg__half img,
+.lucky-egg__crack {
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	object-fit: contain;
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.lucky-egg__half--top {
+	clip-path: polygon(0 0, 100% 0, 100% 52%, 92% 47%, 84% 55%, 75% 46%, 66% 55%, 57% 46%, 48% 55%, 39% 46%, 30% 55%, 21% 46%, 12% 55%, 0 48%);
+}
+
+.lucky-egg__half--bottom {
+	clip-path: polygon(0 48%, 12% 55%, 21% 46%, 30% 55%, 39% 46%, 48% 55%, 57% 46%, 66% 55%, 75% 46%, 84% 55%, 92% 47%, 100% 52%, 100% 100%, 0 100%);
+}
+
+.lucky-egg__crack {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transform: scale(1.08);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Glow & burst */
+
+.lucky-egg__glow {
+	position: absolute;
+	inset: -20%;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(255, 236, 170, 0.95) 0%, rgba(255, 200, 80, 0.45) 35%, rgba(255, 200, 80, 0) 70%);
+	opacity: 0;
+	transform: scale(0.6);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.lucky-egg__burst {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 180%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: repeating-conic-gradient(from 0deg, rgba(255, 221, 120, 0.85) 0deg 8deg, rgba(255, 221, 120, 0) 8deg 22deg);
+	-webkit-mask: radial-gradient(circle, #000 20%, transparent 68%);
+	mask: radial-gradient(circle, #000 20%, transparent 68%);
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.lucky-egg__particles {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 3;
+}
+
+.lucky-egg__particle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: var(--size, 8px);
+	height: var(--size, 8px);
+	border-radius: var(--radius, 2px);
+	background: var(--color, #f59e0b);
+	opacity: 0;
+	animation: le-particle 1.4s var(--delay, 0s) cubic-bezier(0.15, 0.7, 0.3, 1) forwards;
+}
+
+/* States --------------------------------------------------------------- */
+
+.lucky-egg[data-state="checking"] .lucky-egg__egg,
+.lucky-egg[data-state="submitting-user"] .lucky-egg__egg,
+.lucky-egg[data-state="cracking"] .lucky-egg__egg,
+.lucky-egg[data-state="result"] .lucky-egg__egg,
+.lucky-egg[data-state="blocked"] .lucky-egg__egg {
+	cursor: default;
+}
+
+.lucky-egg[data-state="checking"] .lucky-egg__halves {
+	animation: le-pulse 0.9s ease-in-out infinite;
+}
+
+.lucky-egg.is-cracked .lucky-egg__crack {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.lucky-egg.is-cracked .lucky-egg__halves {
+	animation: le-pop 0.45s ease-out;
+}
+
+.lucky-egg.is-cracked .lucky-egg__glow {
+	opacity: 0.35;
+	transform: scale(0.85);
+}
+
+.lucky-egg[data-state="ready-to-crack"] .lucky-egg__halves {
+	animation: le-pop 0.45s ease-out, le-ready 1.6s 0.45s ease-in-out infinite;
+}
+
+.lucky-egg.is-shaking .lucky-egg__halves {
+	animation: le-shake 0.12s linear infinite;
+}
+
+.lucky-egg.is-shaking .lucky-egg__glow {
+	opacity: 0.7;
+	transform: scale(1);
+}
+
+.lucky-egg.is-broken .lucky-egg__halves {
+	animation: none;
+}
+
+.lucky-egg.is-broken .lucky-egg__half--top {
+	transform: translate(-22%, -42%) rotate(-32deg);
+	opacity: 0;
+	transition-delay: 0s, 0.45s;
+}
+
+.lucky-egg.is-broken .lucky-egg__half--bottom {
+	transform: translate(14%, 30%) rotate(20deg);
+	opacity: 0;
+	transition-delay: 0s, 0.5s;
+}
+
+.lucky-egg.is-broken .lucky-egg__crack {
+	opacity: 0;
+	transition-duration: 0.2s;
+}
+
+.lucky-egg.is-broken .lucky-egg__glow {
+	animation: le-glow 1.6s ease-out forwards;
+}
+
+.lucky-egg.is-broken .lucky-egg__burst {
+	animation: le-burst 1.6s ease-out forwards;
+}
+
+.lucky-egg.is-revealed .lucky-egg__stage {
+	width: min(calc(var(--le-egg-size) * 0.55), 50vw);
+}
+
+/* Texts ---------------------------------------------------------------- */
+
+.lucky-egg__hint {
+	margin: 0;
+	font-weight: 600;
+	transition: opacity 0.3s ease;
+}
+
+.lucky-egg.is-revealed .lucky-egg__hint {
+	display: none;
+}
+
+.lucky-egg__notice {
+	width: 100%;
+	max-width: 440px;
+	padding: 10px 14px;
+	border-radius: 10px;
+	background: #fef2f2;
+	color: #991b1b;
+	border: 1px solid #fecaca;
+	font-size: 0.92em;
+}
+
+.lucky-egg__result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	max-width: 560px;
+	opacity: 0;
+	transform: translateY(16px) scale(0.96);
+	transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.lucky-egg.is-revealed .lucky-egg__result {
+	opacity: 1;
+	transform: none;
+}
+
+.lucky-egg__result-title {
+	margin: 0;
+	font-size: 1.35em;
+	line-height: 1.5;
+	color: inherit;
+}
+
+.lucky-egg__result-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.lucky-egg--text-below .lucky-egg__result-body {
+	flex-direction: column-reverse;
+}
+
+.lucky-egg--text-side .lucky-egg__result-body {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.lucky-egg__message,
+.lucky-egg__footer {
+	font-size: 1em;
+}
+
+.lucky-egg__footer {
+	opacity: 0.85;
+	font-size: 0.9em;
+}
+
+.lucky-egg__code-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.lucky-egg__code {
+	display: inline-block;
+	direction: ltr;
+	unicode-bidi: isolate;
+	padding: 10px 20px;
+	border: 2px dashed var(--le-accent);
+	border-radius: 12px;
+	background: var(--le-code-bg);
+	color: var(--le-code-color);
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	font-size: calc(var(--le-font-size) * 1.6);
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	word-break: break-all;
+	user-select: all;
+}
+
+.lucky-egg.is-revealed .lucky-egg__code {
+	animation: le-code-in 0.9s 0.15s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+.lucky-egg__copy {
+	padding: 6px 16px;
+	border: 0;
+	border-radius: 999px;
+	background: var(--le-accent);
+	color: #fff;
+	font: inherit;
+	font-size: 0.85em;
+	cursor: pointer;
+}
+
+.lucky-egg__copy:focus-visible {
+	outline: 2px solid var(--le-code-color);
+	outline-offset: 2px;
+}
+
+.lucky-egg__sms-note {
+	margin: 0;
+	font-size: 0.85em;
+	opacity: 0.8;
+}
+
+/* Modal ---------------------------------------------------------------- */
+
+.lucky-egg-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	direction: rtl;
+	text-align: right;
+	font-size: 16px;
+	color: #1f2937;
+}
+
+.lucky-egg-modal[hidden] {
+	display: none !important;
+}
+
+.lucky-egg-modal__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(15, 23, 42, 0.6);
+	animation: le-fade 0.25s ease;
+}
+
+.lucky-egg-modal__dialog {
+	position: relative;
+	width: 100%;
+	max-width: 420px;
+	max-height: calc(100vh - 32px);
+	overflow-y: auto;
+	padding: 28px 22px 22px;
+	border-radius: 18px;
+	background: #fff;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+	animation: le-modal-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.lucky-egg-modal__close {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: #6b7280;
+	font-size: 26px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.lucky-egg-modal__title {
+	margin: 0 0 6px;
+	font-size: 1.2em;
+	line-height: 1.6;
+}
+
+.lucky-egg-modal__desc {
+	margin: 0 0 16px;
+	color: #4b5563;
+	font-size: 0.92em;
+}
+
+.lucky-egg-modal__form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0;
+}
+
+.lucky-egg-modal__field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-weight: 600;
+	font-size: 0.92em;
+}
+
+.lucky-egg-modal__field input {
+	width: 100%;
+	min-height: 46px;
+	padding: 10px 12px;
+	border: 1px solid #d1d5db;
+	border-radius: 10px;
+	background: #fff;
+	color: #111827;
+	font: inherit;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.lucky-egg-modal__field input[dir="ltr"] {
+	text-align: left;
+}
+
+.lucky-egg-modal__field input:focus {
+	outline: none;
+	border-color: var(--le-accent, #f59e0b);
+	box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+}
+
+.lucky-egg-modal__error {
+	padding: 8px 12px;
+	border-radius: 8px;
+	background: #fef2f2;
+	color: #991b1b;
+	font-size: 0.88em;
+}
+
+.lucky-egg-modal__submit {
+	min-height: 48px;
+	border: 0;
+	border-radius: 12px;
+	background: var(--le-accent, #f59e0b);
+	color: #fff;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.lucky-egg-modal__submit[disabled] {
+	opacity: 0.6;
+	cursor: wait;
+}
+
+body.lucky-egg-modal-open {
+	overflow: hidden;
+}
+
+/* Keyframes ------------------------------------------------------------ */
+
+@keyframes le-float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-6px); }
+}
+
+@keyframes le-wobble {
+	0%, 100% { transform: rotate(0deg); }
+	25% { transform: rotate(-4deg); }
+	75% { transform: rotate(4deg); }
+}
+
+@keyframes le-pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(0.97); }
+}
+
+@keyframes le-pop {
+	0% { transform: scale(1); }
+	40% { transform: scale(1.08) rotate(-3deg); }
+	100% { transform: scale(1); }
+}
+
+@keyframes le-ready {
+	0%, 100% { transform: rotate(0deg); }
+	20% { transform: rotate(-2deg); }
+	40% { transform: rotate(2deg); }
+	60% { transform: rotate(0deg); }
+}
+
+@keyframes le-shake {
+	0% { transform: translate(0, 0) rotate(0deg); }
+	25% { transform: translate(-3px, 1px) rotate(-3deg); }
+	50% { transform: translate(3px, -1px) rotate(3deg); }
+	75% { transform: translate(-2px, 0) rotate(-2deg); }
+	100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes le-glow {
+	0% { opacity: 0.7; transform: scale(0.9); }
+	30% { opacity: 1; transform: scale(1.6); }
+	100% { opacity: 0.25; transform: scale(1.2); }
+}
+
+@keyframes le-burst {
+	0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2) rotate(0deg); }
+	25% { opacity: 1; }
+	100% { opacity: 0; transform: translate(-50%, -50%) scale(1.3) rotate(45deg); }
+}
+
+@keyframes le-particle {
+	0% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+	100% { opacity: 0; transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px))) scale(0.4) rotate(var(--rot, 180deg)); }
+}
+
+@keyframes le-code-in {
+	0% { opacity: 0; transform: scale(0.4); letter-spacing: 0.6em; filter: blur(6px); }
+	100% { opacity: 1; transform: scale(1); letter-spacing: 0.12em; filter: blur(0); }
+}
+
+@keyframes le-fade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes le-modal-in {
+	from { opacity: 0; transform: translateY(24px) scale(0.96); }
+	to { opacity: 1; transform: none; }
+}
+
+/* Responsive ----------------------------------------------------------- */
+
+@media (max-width: 782px) {
+	.lucky-egg {
+		padding: 20px 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.lucky-egg__stage {
+		width: min(var(--le-egg-size), 70vw);
+	}
+
+	.lucky-egg__code {
+		font-size: calc(var(--le-font-size) * 1.3);
+		padding: 8px 14px;
+		letter-spacing: 0.08em;
+	}
+
+	.lucky-egg--text-side .lucky-egg__result-body {
+		flex-direction: column;
+	}
+
+	.lucky-egg-modal {
+		align-items: flex-end;
+		padding: 0;
+	}
+
+	.lucky-egg-modal__dialog {
+		max-width: 100%;
+		border-radius: 18px 18px 0 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lucky-egg *,
+	.lucky-egg-modal * {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Standard WordPress login link shown for members-only campaigns (added in 1.1.0). */
+.lucky-egg__notice .lucky-egg__login {
+	display: inline-block;
+	margin-inline-start: 8px;
+	padding: 4px 12px;
+	border-radius: 999px;
+	background: var(--le-accent, #f59e0b);
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.lucky-egg__notice .lucky-egg__login:hover,
+.lucky-egg__notice .lucky-egg__login:focus-visible {
+	filter: brightness(0.95);
+	text-decoration: underline;
+}

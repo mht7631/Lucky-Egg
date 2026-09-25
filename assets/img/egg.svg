@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <defs>
+    <radialGradient id="le-shell" cx="38%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fffbea"/>
+      <stop offset="35%" stop-color="#fde68a"/>
+      <stop offset="75%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <radialGradient id="le-shine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="le-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#92400e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <path filter="url(#le-shadow)" fill="url(#le-shell)" d="M150 12 C 68 12 26 170 26 252 C 26 336 82 388 150 388 C 218 388 274 336 274 252 C 274 170 232 12 150 12 Z"/>
+  <g fill="#ffffff" fill-opacity="0.35">
+    <circle cx="104" cy="150" r="9"/>
+    <circle cx="196" cy="118" r="6"/>
+    <circle cx="210" cy="260" r="11"/>
+    <circle cx="92" cy="286" r="7"/>
+    <circle cx="160" cy="322" r="5"/>
+    <path d="M150 190 l7 15 16 2 -12 11 3 16 -14 -8 -14 8 3 -16 -12 -11 16 -2 z"/>
+  </g>
+  <ellipse cx="108" cy="104" rx="28" ry="46" fill="url(#le-shine)" transform="rotate(-22 108 104)"/>
+</svg>
