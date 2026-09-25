@@ -1,0 +1,919 @@
+# Lucky Egg translation template.
+# This file is distributed under the same license as the Lucky Egg plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lucky Egg 1.1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: lucky-egg\n"
+
+#. Description of the plugin
+#: lucky-egg.php
+msgid "تخم‌مرغ شانسی تعاملی با کد قرعه‌کشی یکتا، ارسال پیامک، چند کمپینی، شورت‌کد و ویجت المنتور."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:86 includes/elementor-widget.php:28
+msgid "تخم‌مرغ شانسی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:87 includes/class-lucky-egg.php:203
+msgid "کمپین‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:88
+msgid "افزودن / ویرایش کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:88 includes/class-lucky-egg-admin.php:196
+msgid "افزودن کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:89 includes/class-lucky-egg-admin.php:238 includes/class-lucky-egg-admin.php:680 includes/class-lucky-egg-admin.php:814
+msgid "شرکت‌کنندگان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:90 includes/class-lucky-egg-admin.php:799
+msgid "آمار"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:91
+msgid "تنظیمات"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:110
+msgid "انتخاب تصویر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:111
+msgid "استفاده از این تصویر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:112
+msgid "کپی شد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:126
+msgid "شما اجازه دسترسی به این بخش را ندارید."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:126
+msgid "دسترسی غیرمجاز"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:162
+msgid "کمپین ذخیره شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:163
+msgid "کمپین و تمام داده‌های آن حذف شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:164
+msgid "وضعیت کمپین تغییر کرد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:165
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:166
+msgid "گزارش خطاها پاک شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:167
+msgid "پیامک آزمایشی با موفقیت ارسال شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:168
+msgid "ارسال پیامک آزمایشی ناموفق بود. جزئیات در گزارش خطاها ثبت شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:169
+msgid "شماره موبایل معتبر نیست."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:170 includes/class-lucky-egg-campaign.php:460
+msgid "عنوان کمپین الزامی است."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:171 includes/class-lucky-egg-campaign.php:465
+msgid "کلید کمپین باید ۲ تا ۶۴ کاراکتر و فقط شامل حروف کوچک انگلیسی، عدد، خط تیره یا زیرخط باشد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:172 includes/class-lucky-egg-campaign.php:468 includes/class-lucky-egg-campaign.php:521
+msgid "این کلید کمپین قبلاً استفاده شده است."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:173 includes/class-lucky-egg-admin.php:296 includes/class-lucky-egg-admin.php:1195 includes/class-lucky-egg-campaign.php:485
+msgid "کمپین یافت نشد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:174
+msgid "خطای پایگاه داده. جزئیات در گزارش خطاها ثبت شد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:195
+msgid "کمپین‌های تخم‌مرغ شانسی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:202
+msgid "هنوز کمپینی ساخته نشده است."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:203
+msgid "ساخت اولین کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:209 includes/class-lucky-egg-admin.php:336
+msgid "عنوان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:210
+msgid "شورت‌کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:211 includes/class-lucky-egg-admin.php:347
+msgid "وضعیت"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:212 includes/class-lucky-egg-admin.php:815
+msgid "شکستن‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:213
+msgid "تاریخ ایجاد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:214
+msgid "آخرین بروزرسانی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:215
+msgid "عملیات"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:231
+msgid "برای کپی کلیک کنید"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:232 includes/class-lucky-egg-admin.php:350
+msgid "فعال"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:232 includes/class-lucky-egg-admin.php:351 includes/class-lucky-egg-campaign.php:424 includes/class-lucky-egg-entry.php:51
+msgid "غیرفعال"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:237
+msgid "ویرایش"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:239
+msgid "خروجی CSV"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:244
+msgid "غیرفعال‌سازی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:244
+msgid "فعال‌سازی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:250
+msgid "این کمپین و تمام شرکت‌کنندگان و کدهای آن برای همیشه حذف می‌شوند. ادامه می‌دهید؟"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:250 includes/class-lucky-egg-admin.php:889
+msgid "حذف"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:317
+msgid "ویرایش کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:317
+msgid "افزودن کمپین جدید"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:322
+msgid "شورت‌کد:"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:333
+msgid "اطلاعات کلی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:340
+msgid "کلید کمپین (Campaign Key)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:343
+msgid "فقط حروف کوچک انگلیسی، عدد، - و _ . مثال: gold"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:356 includes/class-lucky-egg-admin.php:989
+msgid "نمایش برای"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:363
+msgid "تصاویر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:366 includes/elementor-widget.php:88
+msgid "تصویر تخم‌مرغ"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:367 includes/elementor-widget.php:98
+msgid "تصویر ترک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:373
+msgid "متن‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:376
+msgid "متن راهنما (قبل از کلیک)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:380
+msgid "متن بعد از ترک خوردن"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:384
+msgid "عنوان نتیجه"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:388 includes/class-lucky-egg-campaign.php:101
+msgid "متن کنار کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:392 includes/elementor-widget.php:107
+msgid "موقعیت متن نسبت به کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:396
+msgid "متن پایانی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:403
+msgid "کد قرعه‌کشی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:406
+msgid "پیشوند کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:409
+msgid "مثال: GOLD- (فقط حروف انگلیسی، عدد، - و _؛ حداکثر ۱۶ کاراکتر)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:413
+msgid "طول بخش تصادفی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:420
+msgid "محدودیت شرکت (Rate Limit)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:423
+msgid "تعداد مجاز"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:426 includes/class-lucky-egg-admin.php:983
+msgid "بار در هر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:429
+msgid "بر اساس شناسه کاربر، IP و کوکی به‌صورت همزمان در سمت سرور کنترل می‌شود."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:436
+msgid "صدا، لرزش و پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:439
+msgid "صدا"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:440
+msgid "پخش صدای شکستن"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:443
+msgid "لرزش موبایل"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:444
+msgid "لرزش هنگام شکستن (در صورت پشتیبانی مرورگر)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:447 includes/class-lucky-egg-admin.php:713
+msgid "پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:448
+msgid "ارسال کد با پیامک برای این کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:451
+msgid "متن پیامک اختصاصی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:454
+msgid "خالی = متن پیش‌فرض تنظیمات. متغیرها: {code} ، {name} ، {campaign}"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:461
+msgid "استایل"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:464
+msgid "اندازه تخم‌مرغ (px)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:468
+msgid "اندازه فونت (px)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:472
+msgid "گردی گوشه‌ها (px)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:476
+msgid "رنگ پس‌زمینه"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:477
+msgid "رنگ متن"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:478 includes/elementor-widget.php:287
+msgid "رنگ تأکیدی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:479 includes/elementor-widget.php:265
+msgid "رنگ کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:480 includes/elementor-widget.php:276
+msgid "پس‌زمینه کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:485
+msgid "بروزرسانی کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:485
+msgid "ساخت کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:525
+msgid "پیش‌فرض افزونه"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:527
+msgid "انتخاب از کتابخانه رسانه"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:528
+msgid "بازگشت به پیش‌فرض"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:530
+msgid "فرمت‌های مجاز: JPG، PNG، GIF، WebP، AVIF"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:554
+msgid "خالی = شفاف"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:686
+msgid "همه کمپین‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:691
+msgid "جستجو در نام، موبایل یا کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:692
+msgid "فیلتر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:694
+msgid "خروجی CSV این کمپین"
+msgstr ""
+
+#. translators: %s: number of records
+#: includes/class-lucky-egg-admin.php:701
+#, php-format
+msgid "%s رکورد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:708 includes/class-lucky-egg-admin.php:1218
+msgid "نام"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:709
+msgid "موبایل"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:710 includes/class-lucky-egg-admin.php:1220
+msgid "کد"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:711 includes/class-lucky-egg-admin.php:813 includes/class-lucky-egg-admin.php:1221 includes/elementor-widget.php:65 includes/elementor-widget.php:78
+msgid "کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:712 includes/class-lucky-egg-admin.php:1222
+msgid "تاریخ و زمان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:714 includes/class-lucky-egg-admin.php:1225
+msgid "نوع کاربر"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:719
+msgid "رکوردی یافت نشد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:731 includes/class-lucky-egg-admin.php:1253
+msgid "عضو"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:733 includes/class-lucky-egg-admin.php:1253
+msgid "مهمان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:789
+msgid "کل کمپین‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:790
+msgid "کمپین‌های فعال"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:791
+msgid "تعداد شرکت‌کنندگان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:792
+msgid "تعداد شکستن‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:793
+msgid "شکستن‌های امروز"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:794 includes/class-lucky-egg-admin.php:816
+msgid "پیامک موفق"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:795 includes/class-lucky-egg-admin.php:817
+msgid "پیامک ناموفق"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:809
+msgid "آمار هر کمپین"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:818
+msgid "آخرین شکستن"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:823
+msgid "کمپینی وجود ندارد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:887
+msgid "مقدار فعلی:"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:888
+msgid "برای حفظ مقدار فعلی خالی بگذارید."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:923
+msgid "تنظیمات تخم‌مرغ شانسی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:931
+msgid "پیامک (SMS)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:934
+msgid "ارسال پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:935
+msgid "فعال (کلید سراسری)"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:938
+msgid "درگاه پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:942
+msgid "متن پیش‌فرض پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:945
+msgid "متغیرها: {code} (الزامی)، {name}، {campaign}"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:950 includes/class-lucky-egg-sms.php:116 includes/class-lucky-egg-sms.php:301
+msgid "کاوه‌نگار"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:953 includes/class-lucky-egg-admin.php:970
+msgid "API Key"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:954 includes/class-lucky-egg-admin.php:963
+msgid "شماره خط ارسال‌کننده"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:958 includes/class-lucky-egg-sms.php:160 includes/class-lucky-egg-sms.php:302
+msgid "ملی پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:961
+msgid "نام کاربری"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:962
+msgid "رمز عبور / کلید API"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:971
+msgid "شماره خط"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:977
+msgid "پیش‌فرض کمپین‌های جدید"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:980
+msgid "محدودیت شرکت"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:996
+msgid "تنظیمات عمومی و امنیتی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:999
+msgid "پراکسی / CDN"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1001
+msgid "اعتماد به هدرهای X-Forwarded-For / CF-Connecting-IP"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1002
+msgid "فقط اگر سایت پشت Cloudflare یا Reverse Proxy است فعال کنید؛ در غیر این صورت امکان جعل IP وجود دارد."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1006
+msgid "حداکثر ثبت اطلاعات مهمان از یک IP در ساعت"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1009
+msgid "مهمان‌ها بدون ساخت حساب کاربری شرکت می‌کنند؛ احراز هویت کاربران فقط از طریق ورود استاندارد وردپرس انجام می‌شود."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1015
+msgid "ذخیره تنظیمات"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1019
+msgid "ارسال پیامک آزمایشی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1024
+msgid "ارسال آزمایشی"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1029
+msgid "گزارش خطاها"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1031
+msgid "خطایی ثبت نشده است."
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1036
+msgid "زمان"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1037
+msgid "سطح"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1038
+msgid "پیام"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1039
+msgid "جزئیات"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1056
+msgid "پاک کردن گزارش"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1217
+msgid "ردیف"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1219 includes/class-lucky-egg-shortcode.php:201
+msgid "شماره موبایل"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1223
+msgid "وضعیت پیامک"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1224
+msgid "IP"
+msgstr ""
+
+#: includes/class-lucky-egg-admin.php:1226
+msgid "شناسه کاربر"
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:164
+msgid "تعداد ثبت‌نام‌ها از این شبکه زیاد است. لطفاً کمی بعد دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:173 includes/class-lucky-egg.php:173
+msgid "لطفاً نام خود را به‌درستی وارد کنید (۲ تا ۶۰ حرف)."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:176 includes/class-lucky-egg.php:174
+msgid "شماره موبایل معتبر نیست. نمونه صحیح: ۰۹۱۲۳۴۵۶۷۸۹"
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:183
+msgid "ثبت اطلاعات با مشکل مواجه شد. لطفاً دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:211
+msgid "لطفاً ابتدا شماره موبایل خود را وارد کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:216
+msgid "اطلاعات شما یافت نشد یا منقضی شده است. لطفاً دوباره نام و شماره موبایل را وارد کنید (کوکی مرورگر باید فعال باشد)."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:223
+msgid "سرور مشغول است؛ چند لحظه دیگر دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:230 includes/class-lucky-egg-ajax.php:424
+msgid "خطای موقت سرور. لطفاً دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:264
+msgid "ثبت نتیجه با مشکل مواجه شد. لطفاً دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:356
+msgid "نشست شما منقضی شده است. لطفاً صفحه را دوباره بارگذاری کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:371
+msgid "این کمپین در حال حاضر فعال نیست."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:388
+msgid "این کمپین فقط برای اعضای سایت است. لطفاً ابتدا وارد حساب کاربری خود شوید."
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:395
+msgid "این کمپین فقط برای کاربران مهمان است."
+msgstr ""
+
+#. translators: %s: date and time of the next chance
+#: includes/class-lucky-egg-ajax.php:438
+#, php-format
+msgid "شما قبلاً در این کمپین شرکت کرده‌اید. فرصت بعدی شما: %s"
+msgstr ""
+
+#: includes/class-lucky-egg-ajax.php:439
+msgid "شما قبلاً در این کمپین شرکت کرده‌اید."
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:52
+msgid "روی تخم‌مرغ بزن تا ترک بخورد!"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:53
+msgid "ترک خورد! یک ضربه دیگر بزن تا بشکند."
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:54
+msgid "تبریک! تخم‌مرغ شانسی شکست"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:55
+msgid "کد قرعه‌کشی شما:"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:56
+msgid "این کد را نزد خود نگه دارید."
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:86
+msgid "همه (مهمان و عضو)"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:87
+msgid "فقط مهمان‌ها"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:88
+msgid "فقط اعضا"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:99
+msgid "متن بالای کد"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:100
+msgid "متن پایین کد"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:112
+msgid "ساعت"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:113
+msgid "روز"
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:476
+msgid "ذخیره تنظیمات ممکن نشد."
+msgstr ""
+
+#: includes/class-lucky-egg-campaign.php:524
+msgid "ذخیره کمپین با خطا مواجه شد."
+msgstr ""
+
+#: includes/class-lucky-egg-entry.php:47
+msgid "در صف"
+msgstr ""
+
+#: includes/class-lucky-egg-entry.php:48
+msgid "در حال ارسال"
+msgstr ""
+
+#: includes/class-lucky-egg-entry.php:49
+msgid "ارسال شد"
+msgstr ""
+
+#: includes/class-lucky-egg-entry.php:50
+msgid "ناموفق"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:83
+msgid "تخم‌مرغ شانسی: کلید کمپین مشخص نشده است."
+msgstr ""
+
+#. translators: %s: campaign key
+#: includes/class-lucky-egg-shortcode.php:89
+#, php-format
+msgid "تخم‌مرغ شانسی: کمپین «%s» یافت نشد."
+msgstr ""
+
+#. translators: %s: campaign title
+#: includes/class-lucky-egg-shortcode.php:93
+#, php-format
+msgid "تخم‌مرغ شانسی: کمپین «%s» غیرفعال است و به بازدیدکنندگان نمایش داده نمی‌شود."
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:107
+msgid "تخم‌مرغ شانسی: این کمپین فقط برای مهمان‌ها نمایش داده می‌شود."
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:156
+msgid "شکستن تخم‌مرغ شانسی"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:180 includes/class-lucky-egg.php:179
+msgid "کپی کد"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:192
+msgid "بستن"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:193
+msgid "اطلاعات خود را وارد کنید"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:194
+msgid "برای دریافت کد قرعه‌کشی، نام و شماره موبایل خود را وارد کنید."
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:197
+msgid "نام و نام خانوادگی"
+msgstr ""
+
+#: includes/class-lucky-egg-shortcode.php:205 includes/class-lucky-egg.php:177
+msgid "ثبت و ادامه"
+msgstr ""
+
+#: includes/class-lucky-egg-sms.php:501
+msgid "پیامک آزمایشی افزونه تخم‌مرغ شانسی"
+msgstr ""
+
+#: includes/class-lucky-egg.php:171
+msgid "خطایی رخ داد. لطفاً دوباره تلاش کنید."
+msgstr ""
+
+#: includes/class-lucky-egg.php:172
+msgid "ارتباط با سرور برقرار نشد. اتصال اینترنت خود را بررسی کنید."
+msgstr ""
+
+#: includes/class-lucky-egg.php:175
+msgid "در حال بررسی..."
+msgstr ""
+
+#: includes/class-lucky-egg.php:176
+msgid "در حال ثبت..."
+msgstr ""
+
+#: includes/class-lucky-egg.php:178
+msgid "در حال شکستن..."
+msgstr ""
+
+#: includes/class-lucky-egg.php:180
+msgid "کپی شد!"
+msgstr ""
+
+#: includes/class-lucky-egg.php:181
+msgid "کد برای شماره موبایل شما پیامک می‌شود."
+msgstr ""
+
+#: includes/class-lucky-egg.php:182
+msgid "ورود به حساب کاربری"
+msgstr ""
+
+#: includes/elementor-widget.php:70
+msgid "— انتخاب کمپین —"
+msgstr ""
+
+#: includes/elementor-widget.php:90
+msgid "خالی = تصویر تعریف‌شده در کمپین."
+msgstr ""
+
+#: includes/elementor-widget.php:109
+msgid "مطابق کمپین"
+msgstr ""
+
+#: includes/elementor-widget.php:120
+msgid "کادر"
+msgstr ""
+
+#: includes/elementor-widget.php:145
+msgid "گردی گوشه‌ها"
+msgstr ""
+
+#: includes/elementor-widget.php:157
+msgid "فاصله داخلی"
+msgstr ""
+
+#: includes/elementor-widget.php:169
+msgid "فاصله بین اجزا"
+msgstr ""
+
+#: includes/elementor-widget.php:190
+msgid "تخم‌مرغ"
+msgstr ""
+
+#: includes/elementor-widget.php:198
+msgid "اندازه تصویر"
+msgstr ""
+
+#: includes/elementor-widget.php:219
+msgid "متن و کد"
+msgstr ""
+
+#: includes/elementor-widget.php:228
+msgid "فونت"
+msgstr ""
+
+#: includes/elementor-widget.php:236
+msgid "اندازه فونت"
+msgstr ""
+
+#: includes/elementor-widget.php:254
+msgid "رنگ فونت"
+msgstr ""
+
+#: includes/elementor-widget.php:328
+msgid "یک کمپین برای تخم‌مرغ شانسی انتخاب کنید."
+msgstr ""
+
